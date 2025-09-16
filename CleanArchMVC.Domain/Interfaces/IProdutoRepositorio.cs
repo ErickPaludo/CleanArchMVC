@@ -13,6 +13,6 @@ namespace CleanArchMVC.Domain.Interfaces
         Task<Produto> GetById(int? id);
         Task Create(Produto produto);
         Task Update(Produto produto);
-        Task Remove(Produto produto);
+        Task<Produto> Remove(Produto produto);
     }
 }

@@ -13,6 +13,6 @@ namespace CleanArchMVC.Domain.Interfaces
         Task<Categoria> GetById(int? id);
         Task Create(Categoria categoria);
         Task Update(Categoria categoria);
-        Task Remove(Categoria categoria);
+        Task<Categoria> Remove(Categoria categoria);
     }
 }
