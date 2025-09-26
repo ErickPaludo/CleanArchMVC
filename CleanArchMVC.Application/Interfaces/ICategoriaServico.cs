@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchMVC.Application.Interfaces
 {
-    public interface ICateogiraServico
+    public interface ICategoriaServico
     {
         Task<IEnumerable<CategoriaDTO>> GetCategoriasAsync();
         Task<CategoriaDTO> GetByIdAsync(int? id);

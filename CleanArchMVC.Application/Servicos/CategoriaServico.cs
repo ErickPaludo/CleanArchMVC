@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchMVC.Application.Servicos
 {
-    public class CategoriaServico : ICateogiraServico
+    public class CategoriaServico : ICategoriaServico
     {
         private ICategoriaRepositorio _categoriaRepositorio;
         private readonly IMapper _mapper;
@@ -30,19 +30,16 @@ namespace CleanArchMVC.Application.Servicos
             var categoriaEntidade = await _categoriaRepositorio.GetById(id);
             return _mapper.Map<CategoriaDTO>(categoriaEntidade);
         }
-
         public async Task Add(CategoriaDTO categoriaDTO)
         {
             var categoriaEntidade = _mapper.Map<Categoria>(categoriaDTO);
             await _categoriaRepositorio.Create(categoriaEntidade);
         }
-
         public async Task Update(CategoriaDTO categoriaDTO)
         {
             var categoriaEntidade = _mapper.Map<Categoria>(categoriaDTO);
             await _categoriaRepositorio.Remove(categoriaEntidade);
         }
-
         public async Task Remove(int? id)
         {
             var categoriaEntidade = _categoriaRepositorio.GetById(id).Result;
