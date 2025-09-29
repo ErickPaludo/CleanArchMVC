@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NetDevPack.SimpleMediator" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CleanArchMVC.Application\CleanArchMVC.Application.csproj" />
     <ProjectReference Include="..\CleanArchMVC.Domain\CleanArchMVC.Domain.csproj" />
     <ProjectReference Include="..\CleanArchMVC.Infra.Data\CleanArchMVC.Infra.Data.csproj" />

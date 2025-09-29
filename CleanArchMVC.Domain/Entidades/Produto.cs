@@ -49,7 +49,7 @@ namespace CleanArchMVC.Domain.Entidades
             CategoriaId = categoriaId;
         }
 
-        public int CategoriaId { get; private set; }
+        public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
     }
 }

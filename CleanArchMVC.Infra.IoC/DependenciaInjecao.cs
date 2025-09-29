@@ -2,6 +2,7 @@
 using CleanArchMvc.Application.Services;
 using CleanArchMVC.Application.Interfaces;
 using CleanArchMVC.Application.Mapeamento;
+using CleanArchMVC.Application.Produtos.Handlers;
 using CleanArchMVC.Application.Servicos;
 using CleanArchMVC.Domain.Interfaces;
 using CleanArchMVC.Infra.Data.Context;
@@ -9,6 +10,7 @@ using CleanArchMVC.Infra.Data.Repositorios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetDevPack.SimpleMediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +29,8 @@ namespace CleanArchMVC.Infra.IoC
             services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
             services.AddScoped<ICategoriaServico, CategoriaServico>();
             services.AddScoped<IProdutoServico, ProdutoServico>();
-
             services.AddAutoMapper(typeof(MapeamentoDTOsDominio));
+            services.AddSimpleMediator(typeof(GetProductsQueryHandler).Assembly);
             return services;    
         }
 

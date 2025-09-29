@@ -8,15 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Collection" Version="11.0.0" />
-    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="NetDevPack.SimpleMediator" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CleanArchMVC.Domain\CleanArchMVC.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Produtos\Handlers\" />
   </ItemGroup>
 
 </Project>

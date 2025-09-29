@@ -1,5 +1,5 @@
 ﻿using CleanArchMVC.Domain.Entidades;
-using MediatR;
+using NetDevPack.SimpleMediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +15,6 @@ namespace CleanArchMVC.Application.Produtos.Comandos
         public decimal Preco { get; private set; }
         public int Estoque { get; private set; }
         public string Imagem { get; private set; }
+        public int CategoriaId { get; private set; }
     }
 }

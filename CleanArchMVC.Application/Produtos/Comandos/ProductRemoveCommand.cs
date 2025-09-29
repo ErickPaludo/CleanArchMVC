@@ -1,5 +1,5 @@
 ﻿using CleanArchMVC.Domain.Entidades;
-using MediatR;
+using NetDevPack.SimpleMediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;

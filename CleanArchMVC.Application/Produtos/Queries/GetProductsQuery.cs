@@ -8,12 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchMVC.Application.Produtos.Queries
 {
-    public class GetProductByIdQuery : IRequest<Produto>
+    public class GetProductsQuery : IRequest<IEnumerable<Produto>>
     {
-        public int Id { get; set; }
-        public GetProductByIdQuery(int id)
-        {
-            Id = id;
-        }
     }
 }
